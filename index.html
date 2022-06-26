@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+	<header>
+		<div id="logo" onclick="slowScroll('#top')">
+			<span>
+				IT proger
+			</span>
+		</div> 
+		<div id="about">
+			<a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+			<a href="#" title="Преимущества" onclick="slowScroll('#overview')">Преимущества</a>
+			<a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+			<a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">FAQ</a>
+		</div>
+	</header>
+	                        <!-- MAIN -->
+
+<div id="top">
+	<h1>Programming</h1>
+	<h3>Programming as life!</h3>
+</div>
+
+<div id="main">
+	<div class="intro">
+		<h2>Наши услуги помогут вам</h2>
+		<span>Большой выбор всего</span>
+	</div>
+	<div class="text">
+		<span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe aut, velit tempora necessitatibus aliquid. Doloremque deserunt enim quod natus itaque necessitatibus explicabo sequi autem esse, aut quos modi! Aspernatur, voluptatem.</span>
+	</div>
+</div> 
+
+<div id="overview">
+	<h2>Преимущества</h2>
+	<h4>C нами проще</h4>
+
+<div class="img">
+	<img src="https://itproger.com/img/courses/1588400880.jpg">
+	<span>Разработка игры на Unity</span>
+</div>
+<div class="img">
+	<img src="https://itproger.com/img/courses/1585664833.jpg">
+	<span>Изучение Flask</span>
+</div>
+<div class="img">
+	<img src="https://itproger.com/img/courses/1532598979.jpg">
+	<span>Изучение JavaScript</span>
+</div>
+<div class="img">
+	<img src="https://itproger.com/img/courses/1578903549.jpg">
+	<span>Fullstack</span>
+</div>
+</div>
+<div id="contacts">
+	<center><h5>Обратная связь</h5></center>
+	<form id="form_input">
+		<label for="name">Имя<span>*</span></label><br>
+		<input type="text" placeholder="Введите имя" name="name" id="name"><br>
+		<label for="email">Ваша почта<span>*</span></label><br>
+		<input type="email" placeholder="Ваш email" name="email" id="email"><br>
+		<label for="massage">Сообщение<span>*</span></label><br>
+		<textarea placeholder="Введите ваще сообщение" name="massage" id="massage"></textarea><br>
+		<div id="mess_send" class="btn">Отправить</div>
+		
+		
+	</form>
+</div>
+	
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		function slowScroll(id) {
+			$('html, body').animate({
+            scrollTop: $(id).offset().top
+			}, 500);
+		}
+		$(document).on("scroll", function () {
+		if ($(window).scrollTop() === 0)
+			$("header").removeClass("fixed");
+		else
+			$("header").attr("class", "fixed");
+		});
+	</script>
+</body>
+</html>
